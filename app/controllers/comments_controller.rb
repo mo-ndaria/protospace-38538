@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def create
     @comment = Comment.new(comment_params)
     if @comment.save
@@ -7,7 +6,7 @@ class CommentsController < ApplicationController
     else
       @prototype = @comment.prototype
       @comments = @prototype.comments
-      render "prototype/show"
+      render "prototypes/show"
     end
   end
 
